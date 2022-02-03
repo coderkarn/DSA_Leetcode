@@ -4,9 +4,7 @@ public:
         map<int,int>m;
         for(auto i:nums1){
             for(auto j:nums2)
-            {
                 m[i+j]++;
-            }
         }
         int ans=0;
         for(auto p:nums3){
