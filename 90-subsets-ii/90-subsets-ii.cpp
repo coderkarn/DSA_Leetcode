@@ -2,9 +2,7 @@ class Solution {
 public:
     void solve(vector <int> &nums,int idx,vector <int> &res, vector <vector<int>> &ans)
     {
-        
         ans.push_back(res);
-        
         for(int i=idx;i<nums.size();i++){
             if(i!=idx && nums[i]==nums[i-1])
                 continue;
