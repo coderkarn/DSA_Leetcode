@@ -8,11 +8,10 @@ public:
         while(i<=j){
             if(people[i]+people[j]<=limit)
             {
-                i++;
-               
+                i++;  
             }
             j--;
-                ans++;
+            ans++;
         }
         return ans;
     }
