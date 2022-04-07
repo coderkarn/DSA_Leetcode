@@ -8,6 +8,8 @@ public:
         for(int i=0;i<n;i++)
             pq.push(stones[i]);
         while(!pq.empty()){
+            if(pq.size()==0)
+                return 0;
             if(pq.size()==1)
                 return pq.top();
             int x=pq.top();
