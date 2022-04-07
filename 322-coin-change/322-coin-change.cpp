@@ -22,7 +22,7 @@ public:
                     dp[i][j]=dp[i-1][j];
             }
         }
-        if(dp[n][amount]==INT_MAX-1 ||dp[n][amount]==INT_MAX)
+        if(dp[n][amount]==INT_MAX-1 )
             return -1;
         return dp[n][amount];
     }
