@@ -13,13 +13,13 @@ public:
                     t[i][j]=0;
             }
         }
-        int maxLen=0;              
+        int ans=0;              
         // Now finding the max element
-         for(int i=1;i<=m;i++)
+        for(int i=1;i<=m;i++)
         {
             for(int j=1;j<=n;j++)
-               maxLen=max(maxLen,t[i][j]);
+               ans=max(ans,t[i][j]);
         }
-        return maxLen;
+        return ans;
     }
 };
