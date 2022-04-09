@@ -19,5 +19,9 @@ public:
         }
         int lcsl=t[m][n];
         return (m-lcsl)+(n-lcsl);
+        /*
+        m-lcs=deleting
+        n-lcs=inserting
+        */
     }
 };
