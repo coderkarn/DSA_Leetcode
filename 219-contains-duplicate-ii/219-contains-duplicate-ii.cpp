@@ -12,5 +12,6 @@ public:
             m[nums[i]]=i;
         }
         return false;
+
     }
 };
