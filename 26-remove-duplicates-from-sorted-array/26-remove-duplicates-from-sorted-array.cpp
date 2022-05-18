@@ -11,11 +11,9 @@ public:
                 nums[j]=nums[i];
                 j++;
                 ans++;
-                i++;
             }
-            else{
-                i++;
-            }
+            i++;
+ 
         }
         return ans;
         
