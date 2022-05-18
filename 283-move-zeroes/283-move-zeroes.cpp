@@ -5,13 +5,11 @@ public:
         int n=nums.size();
         for(int i=0;i<n;i++){
             if(nums[i]!=0){
-                nums[idx]=nums[i];
-                idx++;
+                nums[idx++]=nums[i];
             }
         }
         while(idx<n){
-            nums[idx]=0;
-            idx++;
+            nums[idx++]=0;
         }
     }
 };
