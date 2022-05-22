@@ -13,9 +13,8 @@ public:
                 r+=k;
             if(m.find(r)!=m.end()){
                 ans+=m[r];
-                m[r]=m[r]+1;
-            }else
-                m[r]=1;
+            }
+            m[r]++;
         }
         return ans;
     }
