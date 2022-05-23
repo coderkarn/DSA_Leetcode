@@ -18,7 +18,7 @@ public:
         for(int i=0;i<k;i++){
             s-=cardPoints[n-k+i];
             s+=cardPoints[i];
-            ans=max(s,ans);
+            ans=max(ans,s);
         }
         return ans;
     }
