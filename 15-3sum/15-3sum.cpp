@@ -4,7 +4,7 @@ public:
         int n=nums.size();
         sort(nums.begin(),nums.end());
         vector<vector<int>> ans;
-        for(int i=0;i<n && nums[i]<=0;i++){
+        for(int i=0;i<n-1 && nums[i]<=0;i++){
             if(i>0 && nums[i]==nums[i-1])
                 continue;
             int l=i+1,h=n-1;
