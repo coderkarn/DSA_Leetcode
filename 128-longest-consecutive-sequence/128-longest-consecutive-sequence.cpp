@@ -4,21 +4,19 @@ public:
         int n=nums.size();
         if(n<=1)
             return n;
-        sort(nums.begin(),nums.end());
-        int cur=1;
         int ans=0;
-        for(int i=1;i<n;i++){
-            if(nums[i]!=nums[i-1])
-            {
-                if(nums[i]==nums[i-1]+1){
-                    cur+=1;
-                }
-                else{
-                    ans=max(cur,ans);
-                    cur=1;
-                }
+        unordered_set <int> s;
+        for(int i:nums)
+            s.insert(i);
+        for(int i=0;i<n;i++){
+            if(s.find(nums[i]-1)==s.end()){
+                //num not found
+                int j=nums[i];
+                while(s.find(j)!=s.end())
+                    j++;
+                ans=max(ans,j-nums[i]);
             }
         }
-        return max(ans,cur);
+        return ans;
     }
 };
