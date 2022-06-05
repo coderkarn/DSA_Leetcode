@@ -18,7 +18,6 @@ class Solution{
             while(j<k){
                 if(A[j]+A[k]==tar){
                 return true;
-                    break;
                 }
                 else if(A[k]+A[j]>tar)
                 k--;
