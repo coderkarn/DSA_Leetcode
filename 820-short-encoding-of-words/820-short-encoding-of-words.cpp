@@ -1,8 +1,7 @@
 class Solution {
 public:
     int minimumLengthEncoding(vector<string>& words) {
-        set <string > s1(words.begin(),words.end());
-        set <string > s2(words.begin(),words.end());
+        set <string > s1(words.begin(),words.end()), s2(words.begin(),words.end());
         for(auto x: s1){
             for(int i=1;i<x.size();i++)
                 s2.erase(x.substr(i));
