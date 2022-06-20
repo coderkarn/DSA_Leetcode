@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isPal(string &s,int i,int j){
+    bool isPal(string s,int i,int j){
         while(i<j){
             if(s[i]!=s[j])
                 return false;
