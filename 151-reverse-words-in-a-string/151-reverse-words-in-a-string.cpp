@@ -15,7 +15,6 @@ public:
             reverse(res.begin(),res.end());
             if(res.size())
                 ans+=res+" ";
-            res.erase();
             i--;
         }
         int k=ans.size();
