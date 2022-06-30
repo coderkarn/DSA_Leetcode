@@ -10,11 +10,17 @@ using namespace std;
 class Solution{
   public:
     int middle(int A, int B, int C){
-        int k=max(A,max(B,C));
-        int t=min(A,min(B,C));
-        if(A<k && A>t)
+        // int k=max(A,max(B,C));
+        // int t=min(A,min(B,C));
+        // if(A<k && A>t)
+        //     return A;
+        // if(B<k && B>t)
+        //     return B;
+        // return C;
+        
+        if((A>B && A<C) || (A>C && A<B))
             return A;
-        if(B<k && B>t)
+        else if((B>A && B<C) || (B>C && B<A))
             return B;
         return C;
         //code here//Position this line where user code will be pasted.
