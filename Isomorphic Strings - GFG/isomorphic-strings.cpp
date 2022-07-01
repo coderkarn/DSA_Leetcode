@@ -25,7 +25,7 @@ class Solution
                 m1[str1[i]]=str2[i];
                 m2[str2[i]]=str1[i];
             }
-            else if(m1[str1[i]]!=str2[i] || m2[str2[i]]!=str1[i]){
+            else if(m1[str1[i]]!=str2[i] ){
                 return false;
             }
         }
