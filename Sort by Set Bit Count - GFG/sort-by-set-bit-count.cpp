@@ -7,8 +7,17 @@ using namespace std;
 class Solution{
     public:
     static bool comp(int a,int b){
-        
-          return __builtin_popcount(a)>__builtin_popcount(b);
+        int ca=0,cb=0;
+        while(a){
+            ca+=(a&1);
+            a=a>>1;
+        }
+        while(b){
+            cb+=(b&1);
+            b=b>>1;
+        }
+        if(ca==cb) return false;
+        return ca>cb;
     }
     void sortBySetBitCount(int arr[], int n)
     {
