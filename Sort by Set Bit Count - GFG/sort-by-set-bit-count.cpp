@@ -16,7 +16,6 @@ class Solution{
             cb+=(b&1);
             b=b>>1;
         }
-        if(ca==cb) return false;
         return ca>cb;
     }
     void sortBySetBitCount(int arr[], int n)
