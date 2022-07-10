@@ -1,37 +1,37 @@
 class Solution {
 public:
-    int numSubarray(vector<int>& nums,int mid){
-        int c=0,tmpS=0,n=nums.size();
-        for(int i=0;i<n;i++){
-            if(tmpS+nums[i]<=mid)
-                tmpS+=nums[i];
-            else{
+    bool isfeasible(vector<int>& A,int k,int res,int N){
+        int c=1,s=0;
+        for(int i=0;i<N;i++){
+            if(s+A[i]>res){
                 c++;
-                tmpS=nums[i];
+                s=A[i];
+            }else{
+                s+=A[i];
             }
         }
-        c++;
-        return c;
+        return k>=c;
     }
     
-    int splitArray(vector<int>& nums, int m) {
-        //Binary Search on Answer
-        int l=0,r=0,n=nums.size();
-        for(int i=0;i<n;i++){
-            l=max(l,nums[i]);
-            r+=nums[i];
-        }
-        int mid=0,ans=0;
-        while(l<=r){
-            mid=(l+r)/2;
-            //gives the count of subarray for the mid value
-            int c=numSubarray(nums,mid);
-            if(c<=m){
-                r=mid-1;
-                ans=mid;
+    int splitArray(vector<int>& A, int k) {
+        int l=0,r=0;
+        int N=A.size();
+        for(int i=0;i<N;i++){
+            if(l<A[i]){
+                l=A[i];
             }
-            else
-                l=mid+1;
+            r+=A[i];
+        }
+        int ans=0;
+        while(l<=r){
+            int m=(l+r)/2;
+            if(isfeasible(A,k,m,N)){
+                ans=m;
+                r=m-1;
+            }
+            else{
+                l=m+1;
+            }
         }
         return ans;
     }
