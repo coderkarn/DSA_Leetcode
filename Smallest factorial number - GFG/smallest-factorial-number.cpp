@@ -6,7 +6,7 @@ using namespace std;
 
 class Solution
 {
-    public:
+   public:
     
         bool isGood(int n, int mid){
            int numberOfZeros=0;
